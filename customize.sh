@@ -11,6 +11,8 @@ mkdir -p $MODPATH/text
 echo "$ARCH" > $MODPATH/text/the_arch
 chmod 755 -R $MODPATH/script/
 chmod 755 -R $MODPATH/bin/
+# KernelSU 要求模块脚本可执行才会在开机时运行
+chmod 755 $MODPATH/*.sh $MODPATH/META-INF/com/google/android/* 2>/dev/null
 . $MODPATH/script/init_env.sh
 
 cat /dev/null > "${EXTRA_LOG_SAVE_PATH}/info.log"

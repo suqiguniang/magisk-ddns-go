@@ -1,5 +1,13 @@
 # 更新日志
 
+## 2026-10-13 v6.17.7-local-2（修复 KernelSU 兼容）
+
+- 修复刷入后 ddns-go 不启动的问题（KernelSU 设备 9876 打不开）
+- `init_env.sh` 不再依赖 `magisk` 命令，同时兼容 KernelSU 与 Magisk
+- `ddns_go_daemon.sh` 自包含 MODDIR，不再依赖外部导出变量
+- `service.sh` 导出 MODDIR、不再强依赖 busybox 可执行文件
+- `customize.sh` 安装时对模块根目录脚本 chmod 755，确保 KernelSU 开机执行
+
 ## 2026-10-13 v6.17.7-local（本地化离线版）
 
 - 内置各架构（arm / arm64 / x86 / x64）的 `curl`、`jq`、`ddns-go` 二进制，安装过程完全离线
