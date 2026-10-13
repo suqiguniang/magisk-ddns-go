@@ -1,0 +1,4 @@
+# 强制 shell 脚本与模块文件使用 LF 换行,避免 Android sh 解析 \r 报错
+*.sh   text eol=lf
+*.prop text eol=lf
+*      text=auto
