@@ -35,6 +35,9 @@ DDNS_GO_CONFIG_SAVE_PATH="/data/adb/ddns_go/config"
 DDNS_GO_CONFIG_FILE_PATH="$DDNS_GO_CONFIG_SAVE_PATH/ddns_go_config.yaml"
 mkdir -p "$DDNS_GO_CONFIG_SAVE_PATH"
 
+# ddns-go 网页监听地址:0.0.0.0 表示局域网内也可访问;如需仅本机访问改成 127.0.0.1:9876
+DDNS_GO_LISTEN_ADDR="0.0.0.0:9876"
+
 EXTRA_SAVE_PATH=/sdcard/Download/ddnsgo
 EXTRA_BIN_SAVE_PATH="$EXTRA_SAVE_PATH/bin"
 EXTRA_LOG_SAVE_PATH="$EXTRA_SAVE_PATH/log"
